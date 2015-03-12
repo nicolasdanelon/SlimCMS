@@ -32,19 +32,19 @@ class SlimCMS {
 
     // Get the config
     public static function getConfig(){
-        if ($_SERVER['HTTP_HOST'] == "localhost")
-            $folder = "/SlimCMS";
-        else
-            $folder = "";
+        // if ($_SERVER['HTTP_HOST'] == "localhost")
+        //     $folder = "/SlimCMS";
+        // else
+        //     $folder = "";
 
-        $path = $_SERVER['DOCUMENT_ROOT'].$folder;
-        $url = "http://".$_SERVER['HTTP_HOST'].$folder;
+        // $path = $_SERVER['DOCUMENT_ROOT'].$folder;
+        // $url = "http://".$_SERVER['HTTP_HOST'].$folder;
 
         $config = Json::read("content/config.json");
 
-        if (!isset($config['url']) || $config['url'] == "")
-            $config['url'] = $url;
-        $config['path'] = $path;
+        // if (!isset($config['url']) || $config['url'] == "")
+        //     $config['url'] = $url;
+        // $config['path'] = $path;
         return $config;
     }
 

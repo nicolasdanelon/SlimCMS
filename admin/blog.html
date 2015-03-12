@@ -27,7 +27,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">SlimCMS</a>
+            <a class="navbar-brand" href="{{config.url}}/admin">SlimCMS</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -88,10 +88,9 @@
 
 <!-- Bootstrap core JavaScript -->
 <!-- Placed at the end of the document so the pages load faster -->
-<!-- Make sure to add jQuery - download the most recent version at http://jquery.com/ -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="{{config.url}}/admin/js/jquery.min.js"></script>
 <script src="{{config.url}}/admin/ckeditor/ckeditor.js"></script>
-<script type="text/javascript" src="{{config.url}}/admin/ckeditor/adapters/jquery.js"></script>
+<script src="{{config.url}}/admin/ckeditor/adapters/jquery.js"></script>
 <script src="{{config.url}}/admin/js/Util.js"></script>
 <script src="{{config.url}}/admin/js/bootstrap.min.js"></script>
 <script>

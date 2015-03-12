@@ -27,7 +27,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">SlimCMS</a>
+            <a class="navbar-brand" href="{{config.url}}/admin">SlimCMS</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -58,6 +58,8 @@
                 <br/>
                 <input id="inputUrl" class="form-control input-lg" type="text" placeholder="Url: http://" value="{{config.url}}" />
                 <br/>
+                <input id="inputPath" class="form-control input-lg" type="text" placeholder="PatH: /home/user/www" value="{{config.path}}" />
+                <br/>
                 <select name="" id="selectTheme" class="form-control input-lg">
                     <option value="{{page.Template}}">Select a Theme</option>
                     {% for theme in themes %}
@@ -82,8 +84,7 @@
 
 <!-- Bootstrap core JavaScript -->
 <!-- Placed at the end of the document so the pages load faster -->
-<!-- Make sure to add jQuery - download the most recent version at http://jquery.com/ -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="{{config.url}}/admin/js/jquery.min.js"></script>
 <script src="{{config.url}}/admin/js/Util.js"></script>
 <script src="{{config.url}}/admin/js/bootstrap.min.js"></script>
 
@@ -97,7 +98,8 @@
                     "user": $("#inputUser").val(),
                     "password": $("#inputPassword").val(),
                     "theme": $("#selectTheme").val(),
-                    "url": $("#inputUrl").val()
+                    "url": $("#inputUrl").val(),
+                    "path": $("#inputPath").val()
                 };
 
                 $.ajax({
